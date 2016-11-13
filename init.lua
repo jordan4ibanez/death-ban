@@ -1,0 +1,5 @@
+minetest.register_on_dieplayer(function(player)
+	local name = player:get_player_name()
+	minetest.chat_send_all(name.." has died forever!")
+	minetest.ban_player(name)
+end)
